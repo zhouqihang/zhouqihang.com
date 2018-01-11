@@ -12,10 +12,12 @@
 
 1. rename `.env.example` to `.env`, then change your config.
 
+2. rename `/resource/assets/updateJs/config.example.js` to `/resource/assets/updateJs/config.js`, then change your config.
+
 2. run `php artisan key:generate` set the application key.
 
 3. `php artisan migrate`
 
 ## useage
 
-1. npm run start
+1. npm run dev
