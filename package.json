@@ -2,7 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "node ./resources/assets/updateJs/index.js",
-        "start": "forever start ./resources/assets/updateJs/index.js"
+        "start": "forever start -o ./storage/logs/updateJs.log -a ./resources/assets/updateJs/index.js"
     },
     "dependencies": {
         "axios": "^0.17.1",
