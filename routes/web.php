@@ -11,24 +11,12 @@
 |
 */
 
-Route::get('/foo', function () {
-    return 'Hello World';
-});
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/login', function () {
-    return 'login';
-});
+Route::get('/columns/{menu}', 'HomeController@columns')
+    ->name('columns')
+    ->where(['menu' => '^[0-9]+$']);
 
-//Route::get('/', 'HomeController@index')->name('home');
-
-//Route::get('/columns/{menu}', 'HomeController@columns')
-//    ->name('columns')
-//    ->where(['menu' => '^[0-9]+$']);
-//
-//Route::get('/content/{article}', 'HomeController@content')
-//    ->name('content')
-//    ->where(['article' => '^[0-9]+$']);
-//
-//Route::get('text', function () {
-//    return 'sdfsdf';
-//});
+Route::get('/content/{article}', 'HomeController@content')
+    ->name('content')
+    ->where(['article' => '^[0-9]+$']);
