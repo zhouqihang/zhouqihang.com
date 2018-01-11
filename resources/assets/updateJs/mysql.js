@@ -2,12 +2,13 @@
  * Created by baidu on 2018/1/10.
  */
 const mysql = require('mysql');
+const { mysql_host, mysql_user, mysql_pwd, mysql_db } = require('./config');
 
 const conn = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'homestead',
-    password: 'secret',
-    database: 'com_zhouqihang'
+    host: mysql_host,
+    user: mysql_user,
+    password: mysql_pwd,
+    database: mysql_db
 });
 
 conn.connect();
