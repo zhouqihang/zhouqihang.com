@@ -9,14 +9,10 @@ class HomeController extends Controller
 {
 
     public function index () {
-        return 'hello index';
-    }
-    public function columns(int $menu = 0) {
-        // show list
-        return $menu;
+        return view('home');
     }
 
     public function content(int $article = 0) {
-        return $article;
+        return view('content');
     }
 }
