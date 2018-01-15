@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function content(Article $article = null) {
         $this->params['article'] = $article;
-//        dd(base64_decode($article->content));
+        // TODO hits++
         return view('content', $this->params);
     }
 }

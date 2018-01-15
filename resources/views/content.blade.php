@@ -4,24 +4,11 @@
     <!--content-->
     <div class="right-content">
         <section class="panel">
-            {{--<div class="panel-header">--}}
-            {{--<a href="#">--}}
-            {{--<img src="images/img.jpg" alt="img">--}}
-            {{--</a>--}}
-            {{--</div>--}}
             <div class="panel-body">
-                <h2><a href="javascript:;">{{ base64_decode($article->title) }}</a></h2>
-                <article>
+                <h2 class="title"><a href="javascript:;">{{ base64_decode($article->title) }}</a></h2>
+                <article class="markdown-body">
                     {!! base64_decode($article->content) !!}
                 </article>
-                <div class="panel-star">
-                    <span id="star-handle" class="star-container">
-                    <span class="star-text">觉得不错，赏颗星星</span>
-                    <span class="star-box">
-                        <span id="star" class="star"></span>
-                    </span>
-                    </span>
-                </div>
             </div>
 
             <div class="panel-footer">
@@ -36,7 +23,7 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-zuozhe"></use>
                             </svg>
-                            周启航
+                            启航
                         </span>
                     <span>
                             <svg class="icon" aria-hidden="true">

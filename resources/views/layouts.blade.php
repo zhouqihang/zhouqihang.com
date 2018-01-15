@@ -101,6 +101,7 @@
 <script src="//at.alicdn.com/t/font_tpmurnt2p7lanhfr.js"></script>
 <!--jquery-->
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/vendor.js"></script>
 <script type="text/javascript" src="/index.js"></script></body>
 
 </html>
