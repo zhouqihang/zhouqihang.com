@@ -76,9 +76,10 @@
                 </svg>
             </span>
             <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">PHP</a></li>
-                <li><a href="#">WEB前端</a></li>
+                <li><a href="/">首页</a></li>
+                @foreach($menus as $menu)
+                    <li><a href="{{ route('home', ['menu' => $menu->label_id]) }}">{{ $menu->title }}</a></li>
+                @endforeach
             </ul>
         </nav>
         <!--nav end-->

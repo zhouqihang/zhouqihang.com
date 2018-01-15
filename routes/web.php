@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/{menu?}', 'HomeController@index')
+    ->name('home')
+    ->where(['menu' => '^[0-9]+$']);
 
 Route::get('/content/{article}', 'HomeController@content')
     ->name('content')

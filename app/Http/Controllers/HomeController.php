@@ -11,13 +11,21 @@ class HomeController extends Controller
 
     protected $params = [];
 
-    public function index () {
+    public function __construct(){
         // get menus
         $menus = Menu::get(['title', 'label_id']);
         $this->params['menus'] = $menus;
+    }
+
+    public function index (int $menu = null) {
 
         // get five
-        $newArticles = Article::orderBy('created_at', 'desc')->paginate(5);
+        if ($menu === null) {
+            $newArticles = Article::orderBy('created_at', 'desc')->paginate(5);
+        }
+        else {
+            $newArticles = Article::where(['menu_id' => $menu])->orderBy('created_at', 'desc')->paginate(5);
+        }
         $this->params['articles'] = $newArticles;
         return view('home', $this->params);
     }
