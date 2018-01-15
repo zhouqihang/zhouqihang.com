@@ -6,7 +6,7 @@
         @foreach($articles as $article)
         <section class="panel">
             <div class="panel-body">
-                <h2><a href="article.html">{{base64_decode($article->title)}}</a></h2>
+                <h2><a href="{{ route('content', ['article' => $article->id]) }}">{{base64_decode($article->title)}}</a></h2>
             </div>
             <div class="panel-footer">
                 <p>
@@ -14,21 +14,21 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-rili"></use>
                             </svg>
-                            2017-03-03
+                            {{ $article->created_at }}
                         </span>
                     <span>
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-star"></use>
                             </svg>
-                            7
+                            {{ $article->stars }}
                         </span>
                     <span>
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-icasqlistread"></use>
                             </svg>
-                            200
+                        {{ $article->hits }}
                         </span>
-                    <a href="#" class="btn btn-radius btn-s2 pull-right-responsive">
+                    <a href="{{ route('content', ['article' => $article->id]) }}" class="btn btn-radius btn-s2 pull-right-responsive">
                         阅读全文&nbsp;
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-go"></use>
