@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Menu;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -30,7 +29,8 @@ class HomeController extends Controller
         return view('home', $this->params);
     }
 
-    public function content(int $article = 0) {
-        return view('content');
+    public function content(Article $article = null) {
+        $this->params['article'] = $article;
+        return view('content', $this->params);
     }
 }

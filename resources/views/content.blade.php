@@ -4,20 +4,15 @@
     <!--content-->
     <div class="right-content">
         <section class="panel">
-            <div class="panel-header">
-                <a href="#">
-                    <img src="images/img.jpg" alt="img">
-                </a>
-            </div>
+            {{--<div class="panel-header">--}}
+                {{--<a href="#">--}}
+                    {{--<img src="images/img.jpg" alt="img">--}}
+                {{--</a>--}}
+            {{--</div>--}}
             <div class="panel-body">
                 <article>
-                    <h2><a href="#">文章标题</a></h2>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
-                    <p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
+                    <h2><a href="javascript:;">{{ base64_decode($article->title) }}</a></h2>
+                    {{!! base64_decode($article->content) !!}}
                 </article>
                 <div class="panel-star">
                             <span id="star-handle" class="star-container">
@@ -35,7 +30,7 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-rili"></use>
                             </svg>
-                            2017-03-03
+                            {{ $article->created_at }}
                         </span>
                     <span>
                             <svg class="icon" aria-hidden="true">
@@ -47,13 +42,13 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-star"></use>
                             </svg>
-                            7
+                            {{ $article->stars }}
                         </span>
                     <span>
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-icasqlistread"></use>
                             </svg>
-                            200
+                            {{ $article->hits }}
                         </span>
                 </p>
             </div>
