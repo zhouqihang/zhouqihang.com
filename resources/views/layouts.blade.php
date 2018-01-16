@@ -35,17 +35,17 @@
 
                 <!--contact-->
                 <div class="contact">
-                    <a href="#">
+                    <a href="https://github.com/zhouqihang">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-github"></use>
                         </svg>
                     </a>
-                    <a href="javascript:;">
+                    <a href="http://weibo.com/zhqihang">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-weibo"></use>
                         </svg>
                     </a>
-                    <a href="javascript:;">
+                    <a href="mailto:console_log@126.com">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-email"></use>
                         </svg>
@@ -56,9 +56,9 @@
 
             <div class="footer">
                 <div class="footer-copy">
-                    <p>email:<a href="#">console_log@126.com</a></p>
+                    <p>email:<a href="mailto:console_log@126.com">console_log@126.com</a></p>
                     <p>Powered by 周启航 &copy;2017</p>
-                    <p><a href="#">豫ICP备15015306号-2</a></p>
+                    <p><a href="http://www.miitbeian.gov.cn/">豫ICP备15015306号-2</a></p>
                 </div>
             </div>
 
@@ -89,8 +89,8 @@
         <!--footer-->
         <footer>
             <p>Powered by 周启航 &copy;2017</p>
-            <p>email:<a href="#">console_log@126.com</a></p>
-            <p><a href="#">豫ICP备15015306号-2</a></p>
+            <p>email:<a href="mailto:console_log@126.com">console_log@126.com</a></p>
+            <p><a href="http://www.miitbeian.gov.cn/">豫ICP备15015306号-2</a></p>
         </footer>
         <!--footer end-->
     </div>
