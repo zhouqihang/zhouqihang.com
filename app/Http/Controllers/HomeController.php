@@ -34,4 +34,9 @@ class HomeController extends Controller
         $article->increment('hits', 1);
         return view('content', $this->params);
     }
+
+    public function star(Article $article = null) {
+        $article->increment('stars', 1);
+        return $article->stars;
+    }
 }

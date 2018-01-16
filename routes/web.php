@@ -18,3 +18,7 @@ Route::get('/{menu?}', 'HomeController@index')
 Route::get('/content/{article}', 'HomeController@content')
     ->name('content')
     ->where(['article' => '^[0-9]+$']);
+
+Route::post('/star/{article}', 'HomeController@star')
+    ->name('star')
+    ->where(['article' => '^[0-9]+$']);

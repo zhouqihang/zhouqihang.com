@@ -44,3 +44,7 @@
     {{ $articles->links() }}
 
 @endsection
+
+@section('script')
+    <script type="text/javascript" src="/index.js"></script>
+@endsection

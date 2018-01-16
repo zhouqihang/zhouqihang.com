@@ -1,1 +1,1 @@
-webpackJsonp([0],{31:function(n,c,t){"use strict";t(2),t(32),t(33)},32:function(n,c){},33:function(n,c){}},[31]);
+webpackJsonp([0],{31:function(t,a,s){"use strict";s(2),s(32),s(33);var e,n=s(3),r=(e=n)&&e.__esModule?e:{default:e};var c=$("#star"),d=!1;c.on("click",function(){if(!d){var t=c.data("article");t&&(r.default.post("/star/"+t).then(function(t){d=!0}).catch(function(t){}),c.isStared?(c.removeClass("stared star-end"),c.isStared=!1):(c.addClass("stared star-end"),c.isStared=!0))}})},32:function(t,a){},33:function(t,a){}},[31]);

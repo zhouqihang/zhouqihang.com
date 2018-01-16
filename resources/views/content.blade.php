@@ -13,33 +13,38 @@
 
             <div class="panel-footer">
                 <p>
-                            <span>
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-rili"></use>
-                            </svg>
-                                {{ $article->created_at }}
-                        </span>
                     <span>
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-zuozhe"></use>
-                            </svg>
-                            启航
-                        </span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-rili"></use>
+                        </svg>
+                            {{ $article->created_at }}
+                    </span>
                     <span>
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-star"></use>
-                            </svg>
-                        {{ $article->stars }}
-                        </span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zuozhe"></use>
+                        </svg>
+                        启航
+                    </span>
                     <span>
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-icasqlistread"></use>
-                            </svg>
-                        {{ $article->hits }}
-                        </span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-star"></use>
+                        </svg>
+                    {{ $article->stars }}
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-icasqlistread"></use>
+                        </svg>
+                    {{ $article->hits }}
+                    </span>
+                    <span id="star" class="star pull-right" data-article="{{ $article->id }}"></span>
                 </p>
             </div>
         </section>
     </div>
     <!--content-->
+@endsection
+
+@section('script')
+    <script type="text/javascript" src="/article.js"></script>
 @endsection
