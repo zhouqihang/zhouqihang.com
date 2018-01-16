@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function content(Article $article = null) {
         $this->params['article'] = $article;
-        // TODO hits++
+        $article->increment('hits', 1);
         return view('content', $this->params);
     }
 }
