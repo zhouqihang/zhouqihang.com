@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="{{ $keywords }}">
+    <meta name="description" content="{{ $desc }}">
     <title>
-        启航-去远方
+        {{ $title }}
     </title>
     <link href="/styles.css" rel="stylesheet"></head>
 
@@ -35,17 +35,17 @@
 
                 <!--contact-->
                 <div class="contact">
-                    <a href="https://github.com/zhouqihang">
+                    <a href="{{ $github }}">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-github"></use>
                         </svg>
                     </a>
-                    <a href="http://weibo.com/zhqihang">
+                    <a href="{{ $sina }}">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-weibo"></use>
                         </svg>
                     </a>
-                    <a href="mailto:console_log@126.com">
+                    <a href="mailto:{{ $email }}">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-email"></use>
                         </svg>
@@ -56,9 +56,9 @@
 
             <div class="footer">
                 <div class="footer-copy">
-                    <p>email:<a href="mailto:console_log@126.com">console_log@126.com</a></p>
+                    <p>email:<a href="mailto:{{ $email }}">{{ $email }}</a></p>
                     <p>Powered by 周启航 &copy;2017</p>
-                    <p><a href="http://www.miitbeian.gov.cn/">豫ICP备15015306号-2</a></p>
+                    <p><a href="{{ $beianLink }}">{{ $beian }}</a></p>
                 </div>
             </div>
 
@@ -89,8 +89,8 @@
         <!--footer-->
         <footer>
             <p>Powered by 周启航 &copy;2017</p>
-            <p>email:<a href="mailto:console_log@126.com">console_log@126.com</a></p>
-            <p><a href="http://www.miitbeian.gov.cn/">豫ICP备15015306号-2</a></p>
+            <p>email:<a href="mailto:{{ $email }}">{{ $email }}</a></p>
+            <p><a href="{{ $beianLink }}">{{ $beian }}</a></p>
         </footer>
         <!--footer end-->
     </div>

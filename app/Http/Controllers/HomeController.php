@@ -14,6 +14,15 @@ class HomeController extends Controller
         // get menus
         $menus = Menu::get(['title', 'label_id']);
         $this->params['menus'] = $menus;
+        $this->params['title'] = '启航-去远方';
+        $this->params['email'] = 'console_log@126.com';
+        $this->params['beian'] = '豫ICP备15015306号-2';
+        $this->params['beianLink'] = 'http://www.miitbeian.gov.cn/';
+        $this->params['github'] = 'https://github.com/zhouqihang';
+        $this->params['sina'] = 'http://weibo.com/zhqihang';
+        // TODO edit keywords and desc
+        $this->params['keywords'] = '';
+        $this->params['desc'] = '';
     }
 
     public function index (int $menu = null) {
@@ -31,6 +40,7 @@ class HomeController extends Controller
 
     public function content(Article $article = null) {
         $this->params['article'] = $article;
+        $this->params['title'] = base64_decode($article->title) . ' - ' . $this->params['title'];
         $article->increment('hits', 1);
         return view('content', $this->params);
     }
