@@ -11,7 +11,8 @@
         {{ $title }}
     </title>
     <link href="/styles.css" rel="stylesheet"></head>
-
+    @section('css')
+    @show
 <body>
 
 <div class="container">

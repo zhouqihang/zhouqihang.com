@@ -45,6 +45,12 @@
     <!--content-->
 @endsection
 
+@section('css')
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
+@endsection
+
 @section('script')
     <script type="text/javascript" src="/article.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 @endsection
