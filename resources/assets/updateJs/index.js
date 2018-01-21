@@ -97,7 +97,8 @@ function main() {
                 return ;
             }
             let needInsertMenus = [];
-            data = data.map(item => {
+            data = data.filter(item => item.author_association === 'OWNER')
+                .data.map(item => {
                 item.title = Base64.encode(item.title);
                 item.created_at = moment(item.created_at).format('YYYY-MM-DD HH:mm:ss');
                 item.updated_at = moment(item.updated_at).format('YYYY-MM-DD HH:mm:ss');
@@ -140,6 +141,7 @@ function main() {
                     }
                 })
                 // 4.执行新增或更新操作
+                // TODO 根据labels的数量删除失效issues
                 .then(({update, insert}) => {
                     const insertQuery = getInsertQueryString(insert);
                     const updateQuery = getUpdateQueryString(update);
