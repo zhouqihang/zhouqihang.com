@@ -2,8 +2,8 @@
  * Created by baidu on 2018/1/10.
  */
 const HOST = 'https://api.github.com';
-const ISSUES_URL = `${HOST}/repos/ant-design/ant-design/issues`;
-const LABELS_URL = `${HOST}/repos/ant-design/ant-design/labels`;
+const ISSUES_URL = `${HOST}/repos/zhouqihang/zhouqihang.com/issues`;
+const LABELS_URL = `${HOST}/repos/zhouqihang/zhouqihang.com/labels`;
 
 // 每6小时更新一次label
 const LABELS_UPDATE_INTERVAL = 1000 * 60 * 60 * 6;
