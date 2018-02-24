@@ -98,7 +98,7 @@ function main() {
             }
             let needInsertMenus = [];
             data = data.filter(item => item.author_association === 'OWNER')
-                .data.map(item => {
+                .map(item => {
                 item.title = Base64.encode(item.title);
                 item.created_at = moment(item.created_at).format('YYYY-MM-DD HH:mm:ss');
                 item.updated_at = moment(item.updated_at).format('YYYY-MM-DD HH:mm:ss');
